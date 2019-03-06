@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  
+</head>
+
+<body>
+
+    <div id ="app">
+        
+        <ol>
+            <todo-item v-for="item in listOfThings" v-bind:todo = "item" v-bind:key = "item.id"></todo-item>
+        </ol>
+
+    </div>
+
+    <script src="Vue_FirstComponent.js"></script>
+    
+</body>
+
+</html>

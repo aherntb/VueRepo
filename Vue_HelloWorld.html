@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <!-- development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <h1>Vue </h1>
+        
+        <div id ="app">
+                {{message}} : {{value}}                
+        </div>
+
+        <div id = "app2">
+            <span v-bind:title = "message">                
+                Hover over this section for a few seconds
+            </span>
+        </div>
+
+        <div id ="app3">
+            <span v-if="seen">
+                Now you see me
+            </span>
+        </div>
+
+        <div id = "app4">
+            <h4>{{title}}</h4>
+            <ol>
+                <li v-for="task in todo">
+                    {{task.text}}
+                </li>
+
+            </ol>
+
+        </div>
+        
+        <div id = "app5">
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">Reverse Message</button>
+        </div>
+
+
+        <div id ="app6">
+            <h4>{{message}}</h4>
+            <input v-model="message"/>
+            <button v-on:click="reversMyMessage">Reverse Message</button>
+        </div>
+
+        <div id = "app7">
+            <p>{{message}}</p>
+            <input v-model="item"/>
+            <button v-on:click="addToList">Add To List</button>
+            <ol>
+                <li v-for="l in myList">
+                    {{l.text}}
+                </li>
+            </ol>
+            <a href="#" v-on:click="removeFromList">Undo</a>
+
+            
+        </div>        
+        <script src = "Vue_HelloWorld.js"></script>
+    </body>
+</html>
+
